@@ -1,0 +1,22 @@
+<h2><%=dinosaur.name%></h2>
+<p>This dinosaur is a good dinosaur and it is a <%= dinosaur.type%></p>
+
+<p>
+    <a href="/dinosaurs/edit/<%=dinosaur.id%>">EDIT</a>
+</p>
+<hr>
+<div class="imgcontainer">
+    <%dinosaur.imgs.forEach(function(img) {%>
+    <div class="img">
+        <img src="<%=img.url%>" alt="">
+    </div>
+    <%})%>
+</div>
+<br>
+<a href="/dinosaurs/<%=dinosaur.id%>/editphotos">Edit Photos</a>
+<hr>
+<br>
+<p>
+    <a href="/dinosaurs">BACK TO DINOSAURS</a>
+</p>
+</form>

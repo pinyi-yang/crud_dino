@@ -1,0 +1,22 @@
+<h2><%=dinosaur.name%></h2>
+<hr>
+
+<div class="imgcontainer">
+    <%dinosaur.imgs.forEach(function(img) {%>
+    <div class="img">
+      <img src="<%=img.url%>" alt=""><br>
+      <form action="/dinosaurs/<%=dinosaur.id%>/photos/<%=img.id%>/?_method=DELETE" method="POST">
+        <button type="submit" name='imgId' value="<%=img.id%>" id='deletebtn'>DELETE</button>
+      </form>
+    </div>
+    <%})%>
+</div>
+
+<hr>
+<h3>Upload A New Photo</h3>
+<form action="/dinosaurs/<%=dinosaur.id%>/photos" method='POST' enctype='multipart/form-data'>
+  <input type="file" name='myFile'><br>
+  <input type="submit">
+</form>
+<hr>
+<a href="/dinosaurs/<%=dinosaur.id%>">&larr; Back to <%=dinosaur.name%></a>

@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "dinodex",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "dinodex",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "dinodex",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

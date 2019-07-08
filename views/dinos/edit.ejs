@@ -1,0 +1,24 @@
+<h2>Update <%=dinosaur.name%> Info</h2>
+
+<form action="/dinosaurs/<%=dinosaur.id%>/?_method=PUT" method="POST">
+    <label for="dinosaurName">Name</label>
+    <input type="text" name="dinosaurName" value ="<%=dinosaur.name%>"/>
+    
+    <label for="dinosaurType">Type</label>
+    <input type="text" name="dinosaurType" value="<%= dinosaur.type%>"/>
+    <input type="submit" value="SUBMIT">
+</form><br>
+
+<form action="/dinosaurs/<%=dinosaur.id%>/?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE">
+</form>
+<hr>
+<div class="imgcontainer">
+    <%dinosaur.imgs.forEach(function(img) {%>
+    <div class="img">
+        <img src="<%=img.url%>" alt="">
+    </div>
+    <%})%>
+</div>
+<hr>
+<a href="/dinosaurs/<%=dinosaur.id%>">&larr; Back to <%=dinosaur.name%></a>
